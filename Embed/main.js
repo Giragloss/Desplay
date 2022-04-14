@@ -1,4 +1,4 @@
-const links = JSON.parse(atob(document.URL.split('?=')[1].split('?:')[0]))
+const links = JSON.parse(atob(document.URL.split('#')[1].split('?=')[0]))
 const options = {controlBar: {children: ['playToggle', 'progressControl', 'volumePanel', 'captionsButton', 'qualitySelector', 'fullscreenToggle']}}
 
 init()
@@ -24,7 +24,7 @@ function addResources(links) {
   trackSub.setAttribute('label', 'Portugues')
 
   const player = document.querySelector('#player')
-  const tamanho = document.URL.split('?:')[1].split('x')
+  const tamanho = document.URL.split('?=')[1].split('x')
   player.setAttribute('poster', links.thumb)
   player.setAttribute('style', `width: ${tamanho[0]}px; height: ${tamanho[1]}px;`)
 }

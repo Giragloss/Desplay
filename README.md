@@ -1,2 +1,2 @@
-# Player_Desplay
-Um player embed para o App DesPlay
+# Desplay
+App para Assistir e Baixar desenhos

@@ -47,7 +47,7 @@ function setPlayer(id) {
   player.setAttribute('style', `width: ${tamanho[0]}px; height: ${tamanho[1]}px;`)
 
   if(id){
-    playerVideo.setAttribute('style', `width: 100%; height: 100%;`)
+    playerVideo.setAttribute('style', `width: 100%; height: 100%; z-index:1`)
   }else{
     playerPoster.setAttribute('style', `background-image: url("${links.thumb}")`)
     playerButton.setAttribute('onclick',"document.querySelector('.vjs-tech').style='z-index:1'; document.querySelector('.vjs-poster.vjs-hidden').style='display:none'")

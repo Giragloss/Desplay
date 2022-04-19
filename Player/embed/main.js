@@ -46,7 +46,7 @@ function setPlayer(id) {
   const tamanho = document.URL.split('#')[1].split('x')
   player.setAttribute('style', `width: ${tamanho[0]}px; height: ${tamanho[1]}px;`)
   playerPoster.setAttribute('style', `background-image: url("${links.thumb}")`)
-  playerButton.setAttribute('onclick',"document.querySelector('.vjs-tech').style='z-index:1'")
+  playerButton.setAttribute('onclick',"document.querySelector('.vjs-poster.vjs-hidden').style='display:none'")
   playerButton.setAttribute('style', 'width: 107%;height: 109%;top: 0;left: 0;opacity:0.2')
 
   if(id){

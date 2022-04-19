@@ -41,11 +41,14 @@ function setPlayer(id) {
   const player = document.querySelector('#player')
   const playerVideo = document.querySelector('#player video')
   const playerPoster = document.querySelector('.vjs-poster.vjs-hidden')
-  const tamanho = document.URL.split('#')[1].split('x')
+  const playerButton = document.querySelector('.vjs-big-play-button')
 
+  const tamanho = document.URL.split('#')[1].split('x')
   player.setAttribute('style', `width: ${tamanho[0]}px; height: ${tamanho[1]}px;`)
+  playerPoster.setAttribute('style', `background-image: url("${links.thumb}")`)
+  playerButton.setAttribute('onclick',"document.querySelector('.vjs-tech').style='z-index:1'")
+
   if(id){
     playerVideo.setAttribute('style', `width: 100%; height: 100%;`)
   }
-  playerPoster.setAttribute('style', `background-image: url("${links.thumb}")`)
 }

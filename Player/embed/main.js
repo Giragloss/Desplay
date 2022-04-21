@@ -39,7 +39,7 @@ function urlObserver(argument) {
 
 function setPlayer(id) {
   const player = document.querySelector('#player')
-  const playerVideo = document.querySelector('#player video')
+  const playerVideo = document.querySelector('#player_html5_api')
   const playerPoster = document.querySelector('.vjs-poster.vjs-hidden')
   const playerButton = document.querySelector('.vjs-big-play-button')
 
@@ -50,7 +50,7 @@ function setPlayer(id) {
     playerVideo.setAttribute('style', `width: 100%; height: 100%; z-index:1`)
   }else{
     playerPoster.setAttribute('style', `background-image: url("${links.thumb}")`)
-    playerButton.setAttribute('onclick',"document.querySelector('.vjs-tech').style='z-index:1'; document.querySelector('.vjs-poster.vjs-hidden').style='display:none'")
+    playerVideo.setAttribute('onplay', "document.querySelector('.vjs-tech').style='z-index:1'; document.querySelector('.vjs-poster.vjs-hidden').style='display:none'")
     playerButton.setAttribute('style', 'width: 107%;height: 109%;top: 0;left: 0;opacity:0.2')
   }
 }

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="./style.css">
+</head>
+<body>
+	<div class="player">
+		<iframe src="" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"></iframe>
+	</div>
+
+	<div class="inputGerar">
+		<form>
+			<span>Link Dublado:</span>
+			<input type="text" class="linkDub" name="linkDub">
+			<span>Link Legendado:</span>
+			<input type="text" class="linkLeg" name="linkLeg">
+			<span>Legenda:</span>
+			<input type="text" class="linkSub" name="linkSub">
+			<span>Link da Thumb:</span>
+			<input type="text" class="linkThumb" name="linkThumb">
+		</form>
+
+		<button onclick="btnGerar()" class="btn btnForm">Gerar</button>
+	</div>
+
+	<div class="infos">
+		<span>
+			<p>Embed:</p>
+			<input type="name" class="embed" name="embed">
+			<button class="btn btnEmbed" onclick="btnCopy()">Copiar</button>
+		</span>
+	</div>
+
+	<script type="text/javascript" src="./main.js"></script>
+</body>
+</html>

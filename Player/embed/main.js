@@ -24,6 +24,9 @@ function addResources(links) {
   trackSub.setAttribute('src', links.vtt)
   trackSub.setAttribute('srclang', 'pt-br')
   trackSub.setAttribute('label', 'Portugues')
+  if(links.vtt){
+    trackSub.setAttribute('kind', 'captions')
+  }
 }
 
 function optionsSet() {
